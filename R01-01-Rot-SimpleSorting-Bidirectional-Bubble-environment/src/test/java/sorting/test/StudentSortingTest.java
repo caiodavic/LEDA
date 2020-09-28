@@ -1,5 +1,6 @@
 package sorting.test;
 
+import java.text.Bidi;
 import java.util.Arrays;
 
 import org.junit.Assert;
@@ -45,7 +46,7 @@ public class StudentSortingTest {
 	private void getImplementation() {
 		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
 		// null
-		this.implementation = new BubbleSort<>();
+		this.implementation = new RecursiveSelectionSort<>();
 
 	}
 

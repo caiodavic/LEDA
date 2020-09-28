@@ -33,5 +33,4 @@ public class RecursiveSelectionSort<T extends Comparable<T>> extends
 
 		}
 	}
-
 }
