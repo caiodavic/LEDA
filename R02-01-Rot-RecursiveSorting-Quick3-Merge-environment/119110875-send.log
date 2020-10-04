@@ -17,3 +17,33 @@
   <level>FINE</level>
   <message>File 119110875-CAIO DAVI PEREIRA DA SILVA.zip was received. It was sent by CAIO DAVI PEREIRA DA SILVA from IP 192.168.1.15 at 01-10-2020 20*33*41</message>
 </record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-10-02T09:22:12.538-0300</date>
+  <logger>CAIO DAVI PEREIRA DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 119110875-CAIO DAVI PEREIRA DA SILVA.zip was received. It was sent by CAIO DAVI PEREIRA DA SILVA from IP 192.168.1.15 at 02-10-2020 09*22*12</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-10-02T09:29:50.957-0300</date>
+  <logger>CAIO DAVI PEREIRA DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 119110875-CAIO DAVI PEREIRA DA SILVA.zip was received. It was sent by CAIO DAVI PEREIRA DA SILVA from IP 192.168.1.15 at 02-10-2020 09*29*50</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-10-04T20:10:39.851-0300</date>
+  <logger>CAIO DAVI PEREIRA DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 119110875-CAIO DAVI PEREIRA DA SILVA.zip was received. It was sent by CAIO DAVI PEREIRA DA SILVA from IP 192.168.1.15 at 04-10-2020 20*10*39</message>
+</record>

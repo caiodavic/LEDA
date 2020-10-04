@@ -1,5 +1,6 @@
 package sorting.divideAndConquer.hybridMergesort;
 
+
 import sorting.AbstractSorting;
 import util.Util;
 
@@ -31,37 +32,39 @@ public class HybridMergeSort<T extends Comparable<T>> extends
 	protected static int MERGESORT_APPLICATIONS = 0;
 	protected static int INSERTIONSORT_APPLICATIONS = 0;
 
+
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		HybridMergeSort.MERGESORT_APPLICATIONS = 0;
-		HybridMergeSort.INSERTIONSORT_APPLICATIONS = 0;
+		MERGESORT_APPLICATIONS = 0;
+		INSERTIONSORT_APPLICATIONS = 0;
 
 		if(leftIndex >= 0 && rightIndex < array.length && leftIndex<rightIndex){
-			if(rightIndex-leftIndex<=SIZE_LIMIT){
-				insertionSort(array,leftIndex,rightIndex);
-			} else{
-				mergeSort(array,leftIndex,rightIndex);
-			}
+			hybridMergeSort(array,leftIndex,rightIndex);
 		}
 	}
 
-	private void mergeSort(T[] array, int leftIndex, int rightIndex){
-		if(leftIndex >= 0 && rightIndex< array.length && leftIndex<rightIndex) {
-			HybridMergeSort.MERGESORT_APPLICATIONS++;
+	private void hybridMergeSort(T[] array, int leftIndex, int rightIndex) {
+		if (leftIndex >= 0 && rightIndex < array.length && leftIndex < rightIndex) {
+			if (rightIndex - leftIndex + 1 <= SIZE_LIMIT) {
+				insertionSort(array, leftIndex, rightIndex);
+			} else {
+				MERGESORT_APPLICATIONS++;
 
-			int middle = (leftIndex + rightIndex) / 2;
+				int middle = (leftIndex + rightIndex) / 2;
 
-			sort(array, leftIndex, middle);
-			sort(array, middle+1, rightIndex);
+				this.hybridMergeSort(array, leftIndex, middle);
+				this.hybridMergeSort(array, middle + 1, rightIndex);
 
-			merge(array, leftIndex, middle, rightIndex);
+				merge(array, leftIndex, middle, rightIndex);
 
+
+			}
 		}
 	}
 
 	private void insertionSort(T[] array, int leftIndex, int rightIndex) {
 		if (leftIndex >= 0 && rightIndex < array.length && leftIndex < rightIndex) {
 
-			HybridMergeSort.INSERTIONSORT_APPLICATIONS++;
+			INSERTIONSORT_APPLICATIONS++;
 
 			for (int j = leftIndex + 1; j <= rightIndex; j++) {
 				int i = j;

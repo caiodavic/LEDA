@@ -41,7 +41,7 @@ public class StudentSortingTest {
 	 */
 	private void getImplementation() {
 
-		this.implementation = new QuickSort<>();
+		this.implementation = new HybridMergeSort<>();
 
 	}
 
@@ -70,11 +70,12 @@ public class StudentSortingTest {
 	public void genericTest(Integer[] array) {
 		Integer[] copy1 = {};
 		if(array.length > 0){
-			copy1 = Arrays.copyOf(array, array.length);			
+			copy1 = Arrays.copyOf(array, array.length);
 		}
 		implementation.sort(array);
 		Arrays.sort(copy1);
 		Assert.assertArrayEquals(copy1, array);
+
 	}
 
 	@Test
@@ -102,194 +103,6 @@ public class StudentSortingTest {
 		genericTest(vetorValoresRepetidos);
 	}
 
-
-	public void testPortion(Integer[] array, int start, int end ) {
-		Integer[] copy1 = {};
-		if(array.length > 0){
-			copy1 = Arrays.copyOf(array, array.length);
-			Arrays.sort(copy1,start,end+1);
-		}
-		implementation.sort(array,start,end);
-		Assert.assertArrayEquals(copy1, array);
-	}
-
-	@Test
-
-	public void testPortionVetorTamPar01() {
-		testPortion(vetorTamPar, 0, 3);
-	}
-	@Test
-	public void testPortionVetorTamPar02() {
-		testPortion(vetorTamPar,4,7);
-	}
-
-	@Test
-	public void testPortionVetorTamPar03() {
-		testPortion(vetorTamPar,vetorTamPar.length-3,vetorTamPar.length-1);
-	}
-	@Test
-	public void testPortionVetorTamPar04() {
-		testPortion(vetorTamPar,0,1);
-	}
-
-	@Test
-	public void testPortionVetorTamPar05() {
-		testPortion(vetorTamPar,5,6);
-	}
-
-	@Test
-	public void testPortionVetorTamPar06() {
-		testPortion(vetorTamPar,vetorTamPar.length-2,vetorTamPar.length-1);
-
-	}
-
-	@Test
-	public void testPortionVetorTamImpar01() {
-		testPortion(vetorTamImpar, 0, 3);
-	}
-
-	@Test
-	public void testPortionVetorTamImpar02() {
-		testPortion(vetorTamImpar,4,7);
-	}
-
-	@Test
-	public void testPortionVetorTamImpar03() {
-		testPortion(vetorTamImpar,vetorTamImpar.length-3,vetorTamImpar.length-1);
-	}
-
-	@Test
-	public void testPortionVetorTamImpar04() {
-		testPortion(vetorTamImpar,0,1);
-	}
-
-	@Test
-	public void testPortionVetorTamImpar05() {
-		testPortion(vetorTamImpar,5,6);
-	}
-	@Test
-	public void testPortionVetorTamImpar06() {
-		testPortion(vetorTamImpar,vetorTamImpar.length-2,vetorTamImpar.length-1);
-	}
-
-	@Test
-	public void testPortionVetorVazio() {
-		testPortion(vetorVazio,0,2);
-	}
-
-	@Test
-	public void testPortionVetorValoresIguais01() {
-		testPortion(vetorValoresIguais, 0, 3);
-	}
-
-	@Test
-	public void testPortionVetorValoresIguais02() {
-		testPortion(vetorValoresIguais,3,5);
-	}
-
-	@Test
-	public void testPortionVetorValoresIguais03() {
-		testPortion(vetorValoresIguais,vetorValoresIguais.length-3,vetorValoresIguais.length-1);
-	}
-
-	@Test
-	public void testPortionVetorValoresRepetidos01() {
-		testPortion(vetorValoresRepetidos,0,2);
-	}
-
-	@Test
-	public void testPortionVetorValoresRepetidos02() {
-		testPortion(vetorValoresRepetidos,3,5);
-	}
-
-	@Test
-	public void testPortionVetorValoresRepetidos03() {
-		testPortion(vetorValoresRepetidos,vetorValoresRepetidos.length-3,vetorValoresRepetidos.length-1);
-	}
-
-	@Test
-	public void testPortionVetorValoresRepetidos04() {
-		testPortion(vetorValoresRepetidos,0,1);
-	}
-
-	@Test
-	public void testPortionVetorValoresRepetidos05() {
-		testPortion(vetorValoresRepetidos,5,6);
-	}
-
-	@Test
-	public void testPortionVetorValoresRepetidos06() {
-		testPortion(vetorValoresRepetidos,vetorValoresRepetidos.length-2,vetorValoresRepetidos.length-1);
-	}
-
-	public void testIndexs(Integer[] array, int start, int end ) {
-		Integer[] copy1 = {};
-		if(array.length > 0){
-			copy1 = Arrays.copyOf(array, array.length);
-		}
-		implementation.sort(array,start,end);
-		Assert.assertArrayEquals(copy1, array);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamPar01(){
-		testIndexs(vetorTamPar,-3,-1);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamPar02(){
-		testIndexs(vetorTamPar,-2,2);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamPar03(){
-		testIndexs(vetorTamPar,7,15);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamPar04(){
-		testIndexs(vetorTamPar,14,20);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamPar05(){
-		testIndexs(vetorTamPar,4,0);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamImpar01(){
-		testIndexs(vetorTamImpar,-3,-1);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamImpar02(){
-		testIndexs(vetorTamImpar,-2,2);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamImpar03(){
-		testIndexs(vetorTamImpar,7,15);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamImpar04(){
-		testIndexs(vetorTamImpar,14,20);
-	}
-
-	@Test
-	public void testOutIndexsvetorTamImpar05(){
-		testIndexs(vetorTamImpar,4,0);
-	}
-
-
-
-
-
-
-
-
-
-
 	// MÉTODOS QUE OS ALUNOS PODEM CRIAR
 	/**
 	 * O ALUNO PODE IMPLEMENTAR METODOS DE ORDENAÇÃO TESTANDO O SORT COM TRES
@@ -297,4 +110,5 @@ public class StudentSortingTest {
 	 * SEGUIR A ESTRUTURA DOS MÉTODOS DE TESTE ACIMA DESCRITOS, ORDENANDO APENAS
 	 * UMA PARTE DO ARRAY.
 	 */
+
 }
