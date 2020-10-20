@@ -59,7 +59,7 @@ public class QuickSortMedianOfThree<T extends Comparable<T>> extends
 		int middle = (leftIndex+rightIndex)/2;
 
 		if(array[rightIndex].compareTo(array[middle])<0) util.swap(array,rightIndex,middle);
-		if(array[middle].compareTo(array[leftIndex])<0) util.swap(array,middle,leftIndex);
+		if(array[middle].c	ompareTo(array[leftIndex])<0) util.swap(array,middle,leftIndex);
 		if(array[rightIndex].compareTo(array[middle])<0) util.swap(array,rightIndex,middle);
 
 		return middle;
