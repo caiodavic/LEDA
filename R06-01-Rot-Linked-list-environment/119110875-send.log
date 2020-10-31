@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-10-26T21:41:12.397-0300</date>
+  <logger>CAIO DAVI PEREIRA DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 119110875-CAIO DAVI PEREIRA DA SILVA.zip was received. It was sent by CAIO DAVI PEREIRA DA SILVA from IP 192.168.1.8 at 26-10-2020 21*41*12</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-10-29T12:13:14.279-0300</date>
+  <logger>CAIO DAVI PEREIRA DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 119110875-CAIO DAVI PEREIRA DA SILVA.zip was received. It was sent by CAIO DAVI PEREIRA DA SILVA from IP 192.168.1.6 at 29-10-2020 12*13*14</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-10-31T10:05:56.640-0300</date>
+  <logger>CAIO DAVI PEREIRA DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 119110875-CAIO DAVI PEREIRA DA SILVA.zip was received. It was sent by CAIO DAVI PEREIRA DA SILVA from IP 192.168.1.6 at 31-10-2020 10*05*56</message>
+</record>
