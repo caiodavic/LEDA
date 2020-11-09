@@ -49,6 +49,9 @@ public class StudentTestHashtableClosedAddressDivisionMethod {
 							// vazia
 		assertEquals(0, table2.getCOLLISIONS());
 		assertEquals(2, table2.indexOf(103));
+
+
+
 	}
 
 	@Test
@@ -74,6 +77,12 @@ public class StudentTestHashtableClosedAddressDivisionMethod {
 	@Test
 	public void testIsEmpty() {
 		assertFalse(table1.isEmpty());
+		assertTrue(table2.isEmpty());
+		table2.insert(200);
+		assertTrue(table2.size() == 1);
+		table2.remove(200);
+		assertTrue(table2.size() == 0);
+		assertTrue(table2.indexOf(200) == -1);
 	}
 
 	@Test

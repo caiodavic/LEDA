@@ -83,7 +83,6 @@ public class HashtableClosedAddressImpl<T> extends
 			int hashElement = ((HashFunctionClosedAddress<T>) this.hashFunction).hash(element);
 			if (((LinkedList<T>) this.table[hashElement]).size() > 1) {
 				((LinkedList<T>) this.table[hashElement]).remove(element);
-				this.COLLISIONS--;
 			} else {
 				this.table[hashElement] = null;
 			}
